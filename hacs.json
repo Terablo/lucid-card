@@ -1,6 +1,6 @@
 {
-  "name": "Lucid Gravity Premium Dashboard",
-  "filename": "lucid-gravity-card.js",
+  "name": "Lucid Premium Dashboard",
+  "filename": "lucid-card.js",
   "render_readme": true,
   "homeassistant": "2024.4.0"
 }

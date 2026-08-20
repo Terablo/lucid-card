@@ -1,4 +1,4 @@
-# Lucid Gravity Premium Dashboard
+# Lucid Premium Dashboard
 
 A premium Home Assistant Lovelace card that displays an interactive 3D model of
 your Lucid Gravity and animates dynamically based on vehicle sensor states -
@@ -6,6 +6,13 @@ doors, frunk, trunk, charging, climate, ride height - mirroring the design
 language of the official Lucid mobile app.
 
 ![Lucid Gravity](images/gravity-side-profile.png)
+
+## Supported vehicles
+
+**Lucid Gravity** is fully supported today. Air and Sapphire support, along
+with more view and customization options, is planned before 1.0 - the card is
+built on the same model engine that already drives all three vehicles at
+lucidwraps.studio.
 
 ## Requirements
 
@@ -18,7 +25,7 @@ language of the official Lucid mobile app.
 ### HACS (recommended)
 
 1. HACS → three-dot menu → **Custom repositories** → add
-   `https://github.com/Terablo/lucid-gravity-card` with type **Dashboard**.
+   `https://github.com/Terablo/lucid-card` with type **Dashboard**.
 2. Search for "Lucid Gravity Premium Dashboard" in HACS and download it.
 3. Reload your browser when prompted.
 
@@ -29,11 +36,11 @@ renders fully offline.
 ### Manual
 
 1. Download **all assets** from the
-   [latest release](https://github.com/Terablo/lucid-gravity-card/releases/latest)
-   into `config/www/lucid-gravity-card/` (flat, no subfolders).
+   [latest release](https://github.com/Terablo/lucid-card/releases/latest)
+   into `config/www/lucid-card/` (flat, no subfolders).
 2. Add the resource under Settings → Dashboards → ⋮ → Resources:
    ```yaml
-   url: /local/lucid-gravity-card/lucid-gravity-card.js
+   url: /local/lucid-card/lucid-card.js
    type: module
    ```
 
@@ -42,7 +49,7 @@ renders fully offline.
 Add a **Manual** card with just:
 
 ```yaml
-type: custom:lucid-gravity-card
+type: custom:lucid-card
 ```
 
 The card auto-discovers every entity the Lucid Motors integration created. For
@@ -58,14 +65,14 @@ for them and fills in anything you haven't set yourself - an explicit value in
 your YAML always wins, this only fills gaps. A minimal config is enough:
 
 ```yaml
-type: custom:lucid-gravity-card
+type: custom:lucid-card
 ```
 
 If you have more than one Lucid on the account, point the card at the right
 one with `vehicle_name` (matched against the name from the Lucid app, below):
 
 ```yaml
-type: custom:lucid-gravity-card
+type: custom:lucid-card
 vehicle_name: Lucid GRAVITY
 ```
 
@@ -86,7 +93,7 @@ for its "Gear position" sensor. Fastest way to get the exact spelling: Settings
 copy the entity ID shown there directly.
 
 ```yaml
-type: custom:lucid-gravity-card
+type: custom:lucid-card
 # Only needed to override auto-discovery, or entity-by-entity if you'd
 # rather not rely on it at all:
 battery_entity: sensor.lucid_gravity_remaining_battery_percent
