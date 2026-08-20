@@ -109,3 +109,12 @@ door_rr_entity: binary_sensor.lucid_gravity_rear_right_door
 - **Interactive Controls**: Click the Frunk, Trunk, Lock, Charge, or Climate buttons to toggle them directly from the card.
 - **Dynamic Animations**: Doors open, trunk lifts, and camera zooms in when charging.
 - **Speed Lines overlay**: Activates when the `driving_entity` is in Drive.
+
+## Licensing
+
+The card's own code is covered by [LICENSE](LICENSE) — free for personal use
+with Home Assistant. The distribution also contains components this project
+does **not** own and grants no rights to, most importantly the Lucid Gravity
+3D model and imagery, which derive from Lucid Motors' assets — see
+[NOTICE.md](NOTICE.md) for the full list and terms. This project is not
+affiliated with or endorsed by Lucid Motors.
