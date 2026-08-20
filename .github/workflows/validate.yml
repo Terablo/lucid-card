@@ -2,6 +2,14 @@
 # default store ("must pass without any errors or ignores"), and a continuous
 # check that the latest release still satisfies what HACS matches against:
 # hacs.json's filename existing among the release assets.
+#
+# The license check is ignored FOR NOW, deliberately: it requires a
+# GitHub-recognizable (SPDX) license, and every license GitHub recognizes is
+# an open one. This project's interim license is intentionally not open source
+# yet. Before submitting to the default store: swap LICENSE to MIT (NOTICE.md
+# already carries the third-party/derived carve-outs and survives the swap
+# unchanged) and DELETE the ignore below - the store requires a pass with no
+# ignores.
 name: Validate
 
 on:
@@ -21,3 +29,4 @@ jobs:
       - uses: hacs/action@main
         with:
           category: plugin
+          ignore: license
