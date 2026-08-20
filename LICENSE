@@ -1,0 +1,25 @@
+Lucid Gravity Premium Dashboard — License
+
+Copyright (c) 2026 Terablo. All rights reserved.
+
+SCOPE. This license covers only the ORIGINAL WORK of this project: the card
+code (lucid-gravity-card.js, excluding the third-party components embedded in
+it and listed in NOTICE.md), the build tooling, and the documentation. It does
+NOT cover the third-party and derived components listed in NOTICE.md — in
+particular the Lucid Gravity 3D model and interface imagery, to which this
+project claims no rights and grants none. Those components remain under their
+own terms.
+
+PERMISSION is granted to download, install, and use the release assets of this
+project, without charge, for personal use with Home Assistant.
+
+Redistribution of this project's original work, modification, or commercial
+use requires prior written permission. (This project is expected to move to an
+open-source license once development stabilizes.)
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
