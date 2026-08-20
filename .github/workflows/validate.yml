@@ -1,0 +1,23 @@
+# Official HACS validation - a hard requirement for inclusion in the HACS
+# default store ("must pass without any errors or ignores"), and a continuous
+# check that the latest release still satisfies what HACS matches against:
+# hacs.json's filename existing among the release assets.
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  hacs:
+    name: HACS validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hacs/action@main
+        with:
+          category: plugin
