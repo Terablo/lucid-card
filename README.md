@@ -74,7 +74,7 @@ device.
 
 ![Lucid Nexus on a phone, with its climate page](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/phone.webp)
 
-**A family of cards.** Beside the full dashboard there are ten smaller cards
+**A family of cards.** Beside the full dashboard there are nine smaller cards
 you can drop into the dashboards you already have. Most of them need no 3D,
 so they load instantly.
 
@@ -196,7 +196,6 @@ them.
 | Key | `custom:lucid-key-card` | Photo tile with unlock, precondition, frunk and the four doors | no |
 | Charge | `custom:lucid-charge-card` | Live session: dial, kW, range added, time to full | no |
 | Stats | `custom:lucid-stats-card` | Seven days of driving: distance, efficiency, energy | no |
-| Map | `custom:lucid-map-card` | Live location and speed on Home Assistant's map | no |
 | Tile | `custom:lucid-tile-card` | One fact at tile size: battery, range, doors, tyres and more | no |
 | Cabin | `custom:lucid-cabin-card` | Target temperature, modes, heated and ventilated seats | no |
 | Control | `custom:lucid-control-card` | Phone column with a 3D header and one-tap controls | yes |
@@ -216,21 +215,16 @@ The card reads your model from Home Assistant's device registry. To choose it
 yourself, set `model: gravity | air | sapphire`.
 
 **Early access** means nobody has checked that model against a real car yet.
-The card was built and tuned on a Gravity. Air and Sapphire stay switched off
-until you acknowledge that:
-
-```yaml
-type: custom:lucid-card
-model: air
-early_access_ack: true
-```
-
-Without the acknowledgement, the card shows a notice where the car would be.
-With it, an EARLY ACCESS badge stays in the corner, and the notice lists the
-features that model cannot show yet. Depending on the model, these include
+The card was built and tuned on a Gravity. An Air or a Sapphire loads like any
+car, with a small EARLY ACCESS badge in the corner. Hover over the badge to see
+the features that model cannot show yet. Depending on the model, these include
 fender flares, seat colour, stealth trim, the animated light sequences and the
 fender badges. The animated charge cable is also Gravity-only for now. If you own an Air or a Sapphire,
 reports from you are what will move it out of early access.
+
+Versions before v0.3.33 needed `early_access_ack: true` before they would show
+an Air or a Sapphire. That is no longer needed, and leaving it in your
+configuration does no harm.
 
 ## Configuration
 
@@ -285,7 +279,6 @@ charge_range_rate_entity: sensor.lucid_gravity_charging_rate_range_estimate
 | Key | Default | What it does |
 | --- | --- | --- |
 | `model` | from the device registry | `gravity`, `air` or `sapphire` |
-| `early_access_ack` | `false` | Required to load the Air or the Sapphire |
 | `vehicle_name` | first car found | Selects the car when the account has more than one |
 | `tray_columns` | auto | `"1"`, `"2"` or `"3"` fixes the tile layout on every device |
 | `tube_res`, `tube_fireflies` | `256`, `true` | Render height and firefly effect of the driving scenery (YAML only) |
@@ -330,8 +323,8 @@ lists the Lucid entities it could not place, so you can set the right one by
 hand. If a value you expect is not there, the integration may not report it
 yet.
 
-**An Air or a Sapphire shows a notice instead of the car.** Add
-`early_access_ack: true`. See [Supported models](#supported-models).
+**An Air or a Sapphire shows a notice instead of the car.** You are running a
+version older than v0.3.33. Update Lucid Nexus in HACS and reload the browser.
 
 **It is slow on an older phone or tablet.** In the Settings tray, set
 **Render Quality** to *Balanced* or *Low*. The no-3D cards (Glance, Key,
@@ -353,8 +346,8 @@ Home Assistant needs no change.
 - Everything for the Gravity and the Air ships in the release and is served by
   your Home Assistant. That includes the models, scenes, fonts and 3D decoder.
 - **The Sapphire model is the exception.** It is streamed from
-  `lucidwraps.studio` and then cached in your browser. It is only fetched if
-  you choose the Sapphire. The same host also keeps a few optional extra
+  `lucidwraps.studio` and then cached in your browser. It is only fetched for a
+  Sapphire, whether the card detects one or you set `model: sapphire`. The same host also keeps a few optional extra
   scenes that a default card never loads.
 - **Map tiles** for the card's map come from OpenStreetMap.
 - Settings and charge history are stored in your browser. Nothing is sent
