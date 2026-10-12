@@ -1,9 +1,9 @@
-Lucid Gravity Premium Dashboard — License
+Lucid Nexus — License
 
 Copyright (c) 2026 Terablo. All rights reserved.
 
 SCOPE. This license covers only the ORIGINAL WORK of this project: the card
-code (lucid-gravity-card.js, excluding the third-party components embedded in
+code (lucid-card.js and the other card modules, excluding the third-party components embedded in
 it and listed in NOTICE.md), the build tooling, and the documentation. It does
 NOT cover the third-party and derived components listed in NOTICE.md — in
 particular the Lucid Gravity 3D model and interface imagery, to which this
