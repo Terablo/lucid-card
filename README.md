@@ -11,6 +11,9 @@ tap away.
 > sponsored by Lucid Motors. It reads and controls your car only through the
 > [Lucid Motors integration](https://github.com/borski/ha-lucidmotors) in your
 > own Home Assistant.
+>
+> Built by [MakeshiftArtisan](https://github.com/MakeshiftArtisan) and
+> [Terablo](https://github.com/Terablo).
 
 ## Highlights
 
@@ -326,6 +329,15 @@ Home Assistant needs no change.
 - **Map tiles** for the card's map come from OpenStreetMap.
 - Settings and charge history are stored in your browser. Nothing is sent
   anywhere else.
+
+## Authors
+
+- **[MakeshiftArtisan](https://github.com/MakeshiftArtisan)**, who wrote most
+  of the card
+- **[Terablo](https://github.com/Terablo)**
+
+Bug reports and real-car feedback, especially from Air and Sapphire owners,
+are welcome in [Issues](https://github.com/Terablo/lucid-card/issues).
 
 ## Licensing
 
