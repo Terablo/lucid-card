@@ -2,7 +2,9 @@
 
 [![Release](https://img.shields.io/github/v/release/Terablo/lucid-nexus)](https://github.com/Terablo/lucid-nexus/releases)
 [![Validate](https://github.com/Terablo/lucid-nexus/actions/workflows/validate.yml/badge.svg)](https://github.com/Terablo/lucid-nexus/actions/workflows/validate.yml)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5)](https://hacs.xyz/docs/faq/custom_repositories/)
 [![Home Assistant 2024.4+](https://img.shields.io/badge/Home%20Assistant-2024.4%2B-41BDF5)](https://www.home-assistant.io/)
+[![License: MIT](https://img.shields.io/github/license/Terablo/lucid-nexus)](LICENSE)
 
 A live 3D dashboard for your Lucid, built for Home Assistant. The car on screen
 follows the real one: doors, frunk, trunk, windows, charge port, lights and
