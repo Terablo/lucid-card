@@ -1,25 +1,21 @@
-Lucid Nexus — License
+MIT License
 
-Copyright (c) 2026 Terablo. All rights reserved.
+Copyright (c) 2026 MakeshiftArtisan and Terablo
 
-SCOPE. This license covers only the ORIGINAL WORK of this project: the card
-code (lucid-card.js and the other card modules, excluding the third-party components embedded in
-it and listed in NOTICE.md), the build tooling, and the documentation. It does
-NOT cover the third-party and derived components listed in NOTICE.md — in
-particular the Lucid Gravity 3D model and interface imagery, to which this
-project claims no rights and grants none. Those components remain under their
-own terms.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-PERMISSION is granted to download, install, and use the release assets of this
-project, without charge, for personal use with Home Assistant.
-
-Redistribution of this project's original work, modification, or commercial
-use requires prior written permission. (This project is expected to move to an
-open-source license once development stabilizes.)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
-ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

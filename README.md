@@ -369,9 +369,11 @@ are welcome in [Issues](https://github.com/Terablo/lucid-nexus/issues).
 
 ## Licensing
 
-The card's own code is covered by [LICENSE](LICENSE). It is free for personal
-use with Home Assistant. The release also contains components this project
-does **not** own and grants no rights to, each under its own terms. See
+The card's own code is released under the [MIT License](LICENSE). That covers
+the code MakeshiftArtisan and Terablo wrote, including the 3D engine the card
+shares with lucidwraps.studio. The release also contains components this
+project does **not** own and grants no rights to, each under its own terms.
+The MIT License does not extend to them. See
 [NOTICE.md](NOTICE.md) for the full list. The most important of these are the
 Lucid vehicle 3D models and imagery. They are derived from Lucid Motors'
 assets, heavily modified and extended by this project, and included only so the card
