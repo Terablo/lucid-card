@@ -1,11 +1,17 @@
 # Lucid Nexus
 
+[![Release](https://img.shields.io/github/v/release/Terablo/lucid-nexus)](https://github.com/Terablo/lucid-nexus/releases)
+[![Validate](https://github.com/Terablo/lucid-nexus/actions/workflows/validate.yml/badge.svg)](https://github.com/Terablo/lucid-nexus/actions/workflows/validate.yml)
+[![Home Assistant 2024.4+](https://img.shields.io/badge/Home%20Assistant-2024.4%2B-41BDF5)](https://www.home-assistant.io/)
+
 A live 3D dashboard for your Lucid, built for Home Assistant. The car on screen
 follows the real one: doors, frunk, trunk, windows, charge port, lights and
 ride height all move when the car does, and the controls you use most are one
 tap away.
 
-![Lucid Nexus showing a Lucid Gravity on a Home Assistant dashboard](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/hero.webp)
+![Lucid Nexus showing a Lucid Gravity on a Home Assistant dashboard](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/hero.webp)
+
+[![Open your Home Assistant instance and open this repository in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Terablo&repository=lucid-nexus&category=plugin)
 
 > **Community project.** Lucid Nexus is not affiliated with, endorsed by or
 > sponsored by Lucid Motors. It reads and controls your car only through the
@@ -23,7 +29,7 @@ are. The mirrors fold when you lock, the door handles come out when you
 unlock, and the lamps play the lock and unlock light sequence. Paint, wheels
 and the Dream Edition badges match what your car reports.
 
-![Opening and closing the driver door](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/doors.webp)
+![Opening and closing the driver door](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/doors.webp)
 
 **Charging, shown as it happens.** When you plug in, the camera swings to the
 port, the flap opens, the cable seats and the session panel slides out with
@@ -31,40 +37,40 @@ the live power trace, time to finish, range added and a Stop button. The
 Charging page also has the charge limit, the current limiter and your charge
 history.
 
-![Plugging in: the port opens, the cable seats and the session panel appears](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/charging.webp)
+![Plugging in: the port opens, the cable seats and the session panel appears](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/charging.webp)
 
 **Driving view.** Shift out of Park and the car takes to the road. The lane
 markings move at the car's real speed, the scenery streams past, and the
 headlights light up the road at night. While the car is moving, the controls
 that would command it are locked.
 
-![Driving at night](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/driving.webp)
+![Driving at night](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/driving.webp)
 
 **Day and night.** The scene follows the sun, from a daylight river valley to
 a moonlit night. Seven scenes are included, with exposure, colour and glow
 controls if you want to tune the look.
 
-![The same car at night, headlights on](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/night.webp)
+![The same car at night, headlights on](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/night.webp)
 
 **Climate and seats.** Set the cabin temperature and mode, and drive every
 heated or ventilated seat and the steering wheel from a seat-by-seat cabin
 plan. The card finds these controls automatically.
 
-![The climate page](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/climate.webp)
+![The climate page](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/climate.webp)
 
 **Make it yours.** The Wrap Studio has factory paints, any custom colour,
 gloss, satin or matte finishes, and wheel designs and finishes. You can also
 set window tint, ride height, the ambient light strip and upholstery colour.
 These are display choices only: the car itself is not changed.
 
-![Repainting the car in the Wrap Studio](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/wrap.webp)
+![Repainting the car in the Wrap Studio](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/wrap.webp)
 
 **Phone, tablet or wall.** The layout adapts from a desktop down to a phone,
 including the Home Assistant Companion app. Layout choices such as columns,
 interface scale and the information panel's position are remembered per
 device.
 
-![Lucid Nexus on a phone, with its climate page](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/phone.webp)
+![Lucid Nexus on a phone, with its climate page](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/phone.webp)
 
 **A family of cards.** Beside the full dashboard there are ten smaller cards
 you can drop into the dashboards you already have. Most of them need no 3D,
@@ -87,8 +93,13 @@ if the browser resets the 3D context.
 
 ### HACS (recommended)
 
+[![Open your Home Assistant instance and open this repository in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Terablo&repository=lucid-nexus&category=plugin)
+
+The button opens HACS in your own Home Assistant with this repository filled
+in. To do it by hand instead:
+
 1. In HACS, open the three-dot menu, choose **Custom repositories**, and add
-   `https://github.com/Terablo/lucid-card` with type **Dashboard**.
+   `https://github.com/Terablo/lucid-nexus` with type **Dashboard**.
 2. Search for **Lucid Nexus** and download it.
 3. Reload your browser when prompted.
 
@@ -99,15 +110,32 @@ Everything the card needs ships in the release, including the Gravity and Air
 to browsers in their place. The first time a browser opens the card it fetches
 about 3 MB, and after that it loads from cache.
 
+### Moving from the old `lucid-card` repository
+
+Until October 2026 this repository was `Terablo/lucid-card`. HACS stops
+updating a repository once its name changes, so if you installed it under the
+old name, install it again:
+
+1. In HACS, open **Lucid Nexus**, choose **Remove**, and reload the browser.
+2. If `https://github.com/Terablo/lucid-card` is still listed under
+   **Custom repositories**, delete it there too.
+3. Install again with the button above.
+4. Under **Settings → Dashboards → ⋮ → Resources**, delete any
+   `/hacsfiles/lucid-card/lucid-card.js` entry that is still there. The new one
+   is `/hacsfiles/lucid-nexus/lucid-card.js`.
+
+Your dashboards do not change: the card types (`custom:lucid-card` and the
+rest) are the same, and the card's settings live in your browser.
+
 ### Manual
 
 1. Download **every asset** from the
-   [latest release](https://github.com/Terablo/lucid-card/releases/latest) into
-   `config/www/lucid-card/`. Keep the folder flat, with no subfolders, and
+   [latest release](https://github.com/Terablo/lucid-nexus/releases/latest) into
+   `config/www/lucid-nexus/`. Keep the folder flat, with no subfolders, and
    include the `.br` and `.gz` files.
 2. Add the resource under **Settings → Dashboards → ⋮ → Resources**:
    ```yaml
-   url: /local/lucid-card/lucid-card.js
+   url: /local/lucid-nexus/lucid-card.js
    type: module
    ```
 
@@ -126,7 +154,7 @@ written until you tap, and the card never edits a dashboard it did not create.
 This needs an administrator account. If you are not an admin, the setup card
 shows you the configuration to paste instead.
 
-![The setup card](https://raw.githubusercontent.com/Terablo/lucid-card/main/images/setup.webp)
+![The setup card](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/images/setup.webp)
 
 ### 2. A self-updating dashboard
 
@@ -337,7 +365,7 @@ Home Assistant needs no change.
 - **[Terablo](https://github.com/Terablo)**
 
 Bug reports and real-car feedback, especially from Air and Sapphire owners,
-are welcome in [Issues](https://github.com/Terablo/lucid-card/issues).
+are welcome in [Issues](https://github.com/Terablo/lucid-nexus/issues).
 
 ## Licensing
 
