@@ -68,12 +68,19 @@ with type **Dashboard** → search **Lucid Nexus** → **Download**.
 
 ### HACS and the Home Assistant Marketplace
 
-Home Assistant is building a Marketplace into Home Assistant itself, which
-takes over from HACS and moves HACS content across when it first starts.
-Links to `hacs_repository` are redirected to the Marketplace, so the link
-above stays the one to give. If the Marketplace asks the person to connect a
-GitHub account or to accept a warning before it adds a repository, they do
-that themselves: do not accept it on their behalf.
+Home Assistant is building a Marketplace into Home Assistant itself (planned
+for 2026.11). It takes over from HACS and moves installed HACS content,
+Lucid Nexus included, across when it first starts. What changes for this card:
+
+- The link above still works: `hacs_repository` links are redirected to the
+  Marketplace.
+- The Marketplace lists what the HACS default store lists. Lucid Nexus has
+  been submitted there; until it is listed, adding it may ask the person to
+  connect a GitHub account and accept a warning first. They do that
+  themselves: do not accept it on their behalf.
+- The dashboard resource becomes `/local/community/lucid-nexus/lucid-card.js`
+  instead of `/hacsfiles/lucid-nexus/lucid-card.js`. The Marketplace rewrites
+  the existing entry itself, and the old address keeps working.
 
 ### Upgrading from the old name
 
@@ -255,7 +262,8 @@ lists the common keys.
   the Companion app's frontend cache.
 - "Custom element doesn't exist: lucid-card" means the resource did not load:
   reload, and check **Settings → Dashboards → ⋮ → Resources** has
-  `/hacsfiles/lucid-nexus/lucid-card.js`.
+  `/hacsfiles/lucid-nexus/lucid-card.js` (HACS) or
+  `/local/community/lucid-nexus/lucid-card.js` (Marketplace).
 
 The README's [Troubleshooting](README.md#troubleshooting) section covers the
 rest.

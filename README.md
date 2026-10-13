@@ -116,6 +116,15 @@ about 3 MB, and after that it loads from cache.
 [AGENTS.md](AGENTS.md). That file walks an assistant through installing the
 card, building the dashboard and customising it, without touching your car.
 
+### The Home Assistant Marketplace
+
+Home Assistant is building a Marketplace into Home Assistant itself (planned
+for 2026.11), which takes over from HACS. If you already have Lucid Nexus, it
+moves across on its own. The button above keeps working
+too: it opens the Marketplace instead of HACS. The only visible change is the
+resource address, which becomes `/local/community/lucid-nexus/lucid-card.js`;
+the Marketplace updates it for you.
+
 ### Moving from the old `lucid-card` repository
 
 Until October 2026 this repository was `Terablo/lucid-card`. HACS stops
@@ -128,7 +137,9 @@ old name, install it again:
 3. Install again with the button above.
 4. Under **Settings → Dashboards → ⋮ → Resources**, delete any
    `/hacsfiles/lucid-card/lucid-card.js` entry that is still there. The new one
-   is `/hacsfiles/lucid-nexus/lucid-card.js`.
+   is `/hacsfiles/lucid-nexus/lucid-card.js`, or
+   `/local/community/lucid-nexus/lucid-card.js` once you are on the
+   Marketplace.
 
 Your dashboards do not change: the card types (`custom:lucid-card` and the
 rest) are the same, and the card's settings live in your browser.
