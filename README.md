@@ -112,6 +112,10 @@ Everything the card needs ships in the release, including the Gravity and Air
 to browsers in their place. The first time a browser opens the card it fetches
 about 3 MB, and after that it loads from cache.
 
+**Using an AI assistant?** Point it at this repository, or tell it to read
+[AGENTS.md](AGENTS.md). That file walks an assistant through installing the
+card, building the dashboard and customising it, without touching your car.
+
 ### Moving from the old `lucid-card` repository
 
 Until October 2026 this repository was `Terablo/lucid-card`. HACS stops

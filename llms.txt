@@ -1,0 +1,17 @@
+# Lucid Nexus
+
+> A live 3D dashboard card for a Lucid Gravity, Air or Sapphire in Home Assistant, installed through HACS. It shows and controls the car through the Lucid Motors integration (borski/ha-lucidmotors). If you are an AI assistant helping someone install, set up or customise it, read AGENTS.md first.
+
+- One-click install link (opens HACS in the person's own Home Assistant and adds this repository): https://my.home-assistant.io/redirect/hacs_repository/?owner=Terablo&repository=lucid-nexus&category=plugin
+- The main card type is `custom:lucid-card`. It needs a panel view.
+
+## Docs
+
+- [AGENTS.md](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/AGENTS.md): install, dashboard setup, every YAML option, customisation recipes and ground rules for assistants
+- [README.md](https://raw.githubusercontent.com/Terablo/lucid-nexus/main/README.md): the user-facing README, with troubleshooting and privacy
+
+## Optional
+
+- [Releases](https://github.com/Terablo/lucid-nexus/releases): versions and release notes
+- [Issues](https://github.com/Terablo/lucid-nexus/issues): bug reports and real-car feedback
+- [Lucid Motors integration](https://github.com/borski/ha-lucidmotors): the required integration
